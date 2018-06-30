@@ -245,6 +245,8 @@ def main():
 					# NumOfNodes is the number of nodes
 				elif '#set3=' in line:
 					KeyExchange=False
+				elif 'set3=' in line:
+					KeyExchange=True
 				elif 'set4=' in line:
 					LHS=line.find('(')
 					RHS=line.find(')')
