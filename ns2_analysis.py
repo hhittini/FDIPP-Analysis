@@ -148,13 +148,6 @@ def FormatAndStore(NumOfNodes,RateOfCBR,KeyExchange,timestr,delay_results_df,los
 		part2=key.split('_')[1]
 		avg_delay_df[part2][part1]=avg_delay_dict.get(key)
 		avg_loss_df[part2][part1]=avg_loss_dict.get(key)
-		# print(part1)
-		# print(part2)
-		# print(key)
-		# print(avg_delay_dict.get(key))
-		# print(avg_delay_dict)
-		# print(avg_delay_df)
-		# exit()
 	if KeyExchange==True:
 		for key in avg_key_dict.keys():
 			part1=str(int(key.split('_')[0]))
@@ -162,6 +155,7 @@ def FormatAndStore(NumOfNodes,RateOfCBR,KeyExchange,timestr,delay_results_df,los
 			avg_key_df[part2][part1]=avg_key_dict.get(key)
 	
 	analysis_dir='Analysis-'+timestr
+	chdir('../')
 	mkdir(analysis_dir)
 	chdir(analysis_dir)
 
